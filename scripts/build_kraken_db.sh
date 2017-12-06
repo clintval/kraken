@@ -164,7 +164,7 @@ else
   echo "Creating seqID to taxID map (step 5 of 6)..."
   start_time1=$(date "+%s.%N")
 
-  find library/ -maxdepth 2 -name prelim_map.txt | xargs cat > taxonomy/prelim_map.txt
+  find library/ -maxdepth 3 -name prelim_map.txt | xargs cat > taxonomy/prelim_map.txt
   if [ ! -s "taxonomy/prelim_map.txt" ]; then
     echo "No preliminary seqid/taxid mapping files found, aborting."
     exit 1
